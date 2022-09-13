@@ -1,9 +1,37 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './App.css';
+import Expenses from './components/Expenses';
 
 function App() {
   const [count, setCount] = useState(0);
+
+  const expenses = [
+    {
+      id: 'e1',
+      title: 'Car Payment',
+      amount: 294.76,
+      edate: new Date(2017, 11, 8),
+    },
+    {
+      id: 'e2',
+      title: 'Mortgage',
+      amount: 1921.55,
+      edate: new Date(2022, 8, 2),
+    },
+    {
+      id: 'e3',
+      title: 'Amazon',
+      amount: 300.22,
+      edate: new Date(2015, 1, 4),
+    },
+    {
+      id: 'e4',
+      title: 'Lowes',
+      amount: 119.75,
+      edate: new Date(2021, 5, 15),
+    },
+  ];
 
   return (
     <div className="App">
@@ -15,18 +43,12 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <Expenses items={expenses} />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   );
 }
