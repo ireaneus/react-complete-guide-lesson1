@@ -5,18 +5,6 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
 
-  const person = {
-    name: 'Dude',
-  };
-
-  const secondPerson = {
-    ...person,
-  };
-
-  person.name = 'bwdave';
-
-  console.log(secondPerson.name); //result in first const object 'Dude'
-
   return (
     <div className="App">
       <div>
