@@ -8,7 +8,7 @@ const INITIAL_EXPENSES = [
     id: 'e1',
     title: 'Car Payment',
     amount: 294.76,
-    date: new Date(2017, 11, 8),
+    date: new Date(2019, 11, 8),
   },
   {
     id: 'e2',
@@ -20,7 +20,7 @@ const INITIAL_EXPENSES = [
     id: 'e3',
     title: 'Amazon',
     amount: 300.22,
-    date: new Date(2015, 1, 4),
+    date: new Date(2022, 1, 4),
   },
   {
     id: 'e4',
@@ -31,7 +31,6 @@ const INITIAL_EXPENSES = [
 ];
 
 export default function App() {
-  const [count, setCount] = useState(0);
   const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
 
   const addExpenseHandler = (expense) => {
@@ -44,11 +43,6 @@ export default function App() {
     <div className="App">
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
     </div>
   );
 }
