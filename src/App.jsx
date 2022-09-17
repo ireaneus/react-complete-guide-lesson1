@@ -29,7 +29,7 @@ const INITIAL_EXPENSES = [
   },
 ];
 
-export default function App() {
+const App = () => {
   const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
 
   const addExpenseHandler = (expense) => {
@@ -44,4 +44,5 @@ export default function App() {
       <Expenses items={expenses} />
     </div>
   );
-}
+};
+export default App;
