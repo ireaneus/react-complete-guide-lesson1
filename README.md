@@ -1,4 +1,4 @@
-# vitejs-vite-rwki9x
+# React - The Complete Guide Lesson 1 - Expenses Application
 
 ```js
   const person = {
